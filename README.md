@@ -4,6 +4,14 @@ Vim/Neovim syntax highlighting for the [Ziium](https://github.com/ziium/ziium) p
 
 ## Install
 
+### vim.pack.add (Neovim 0.12+)
+
+```lua
+vim.pack.add({
+  { src = "https://github.com/ziium/vim-ziium" },
+})
+```
+
 ### lazy.nvim
 
 ```lua
