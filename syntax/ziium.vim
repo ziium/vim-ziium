@@ -3,7 +3,7 @@ if exists('b:current_syntax')
 endif
 
 " Hangul syllables (44032-55203) + ASCII letters/digits/underscore
-setlocal iskeyword=@,48-57,_,44032-55203
+setlocal iskeyword=@,48-57,_
 
 " --- Comments ---
 syn match ziiumComment /#.*$/
