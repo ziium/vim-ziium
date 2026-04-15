@@ -2,17 +2,17 @@ if exists('b:current_syntax')
   finish
 endif
 
-" Hangul syllables (44032-55203) + ASCII letters/digits/underscore
-setlocal iskeyword=@,48-57,_
+" Exclude digits from keyword chars so 10이다 splits into 10 + 이다
+setlocal iskeyword=@,_
 
 " --- Comments ---
 syn match ziiumComment /#.*$/
 
 " --- Strings ---
-syn region ziiumString start=/"/ skip=/\"/ end=/"/
+syn region ziiumString start=/"/ skip=/\\"/ end=/"/
 
 " --- Numbers ---
-syn match ziiumNumber /\<\d\+\(\.\d\+\)\?\>/
+syn match ziiumNumber /\d\+\(\.\d\+\)\?/
 
 " --- Keywords ---
 syn keyword ziiumKeyword 이다 넣는다 넣고 출력한다 출력하고
