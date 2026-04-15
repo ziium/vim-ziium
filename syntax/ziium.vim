@@ -2,14 +2,14 @@ if exists('b:current_syntax')
   finish
 endif
 
-" Hangul syllables (0xAC00-0xD7A3) + ASCII letters/digits/underscore
-setlocal iskeyword=@,48-57,_,0xAC00-0xD7A3
+" Hangul syllables (44032-55203) + ASCII letters/digits/underscore
+setlocal iskeyword=@,48-57,_,44032-55203
 
 " --- Comments ---
 syn match ziiumComment /#.*$/
 
 " --- Strings ---
-syn region ziiumString start=/"/ skip=/\\"/ end=/"/
+syn region ziiumString start=/"/ skip=/\"/ end=/"/
 
 " --- Numbers ---
 syn match ziiumNumber /\<\d\+\(\.\d\+\)\?\>/
